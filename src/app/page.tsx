@@ -6,6 +6,19 @@ import styles from "./page.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+export const metadata = {
+  title: "Manjiro Next",
+  robots: {
+    index: false,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
+  },
+};
+
 export default async function Home() {
   const posts: Post[] = await getPosts();
 
